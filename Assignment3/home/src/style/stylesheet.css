@@ -1,0 +1,92 @@
+body{
+    background-color: darkslateblue;
+}
+.footer{
+    position :fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+    text-decoration: underline;
+}
+.bg-dark{
+    background-color: darkslategray;
+    color: white;
+}
+.header{
+    height: 70px;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+}
+.header-brand{
+    height: 45px;
+    width: 45px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: darkorchid;
+    border-radius: 20%;
+    display: inline-block;
+    margin: 5px;
+    padding: 8px;
+    text-decoration: underline;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.profile-image{
+    width: 40px;
+    height: 40px;
+}
+.bg-profile{
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.carousel {
+    margin-top: 80px;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+#carouselItem{
+    width: 700px;
+    height: 450px;
+    margin: 20px;
+}
+.carousel-previous-btn{
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    text-align: center;
+    font-weight: bolder;
+    border: 4px solid green;
+    border-radius: 50%;
+
+}
+.carousel-next-btn{
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    font-weight: bolder;
+    text-align: center;
+    border: 4px solid green;
+    border-radius: 50%;
+
+}
