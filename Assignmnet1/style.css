@@ -1,0 +1,82 @@
+body{
+    background-color: darkslateblue;
+}
+.footer{
+    position :fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+    text-decoration: underline;
+}
+.bg-dark{
+    background-color: darkslategray;
+    color: white;
+}
+.header{
+    height: 50px;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+}
+.header-brand{
+    height: 45px;
+    width: 45px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: darkorchid;
+    border-radius: 20%;
+    display: inline-block;
+    margin: 5px;
+    padding: 8px;
+    text-decoration: underline;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.profile-image{
+    width: 40px;
+    height: 40px;
+}
+.bg-profile{
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+}
+
+.carousel {
+    width: 80%;
+    background-color: rgb(245, 6, 6);
+    }
+#carouselItem{
+    width: 900px;
+    height: 500px;
+    margin: 20px;
+}
+.carousel-previous-btn{
+    width: 80px;
+    height: 20px;
+    background-color: brown;
+    text-align: center;
+    vertical-align: middle;
+}
+.carousel-next-btn{
+    width: 60px;
+    height: 20px;
+    background-color: brown;
+    
+}

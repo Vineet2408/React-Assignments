@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>HandsOn 1</title>
+</head>
+<body onload="onStart()">
+    <div class="header bg-dark"> 
+        <span class="header-brand">
+            <image class="logo" src="https://www.clipartkey.com/mpngs/m/284-2846769_source-code-icon-transparent-png-coding-logos.png"></image>
+        </span>
+        
+        <span class= "bg-profile">
+            <img class= "profile-image" src="https://www.logolynx.com/images/logolynx/97/97e88682fa82ed11f3bf96dcf8479635.png">
+        </span>
+    </div>
+
+    <div class="carousel" ></div>
+        <div>
+            <button onclick="onPrevious()" class="carousel-previous-btn"> Previous</button>
+            <img src="https://i1.sndcdn.com/artworks-000482183808-s7h0nx-t500x500.jpg" id="carouselItem">
+            <button onclick="onNext()" class="carousel-next-btn"> Next</button>
+
+        </div>
+    </div>
+
+    <div class='footer'>
+        <h4 >Thanks for visiting</h4>
+    </div>
+
+    <script>
+        var url1='https://i1.sndcdn.com/artworks-000482183808-s7h0nx-t500x500.jpg';
+        var url2='https://i.ytimg.com/vi/8qLL2Gx3I_k/maxresdefault.jpg';
+        var url3='https://i.ytimg.com/vi/9bXgeAJbM1g/maxresdefault.jpg';
+        var ar=[url1,url2,url3];
+        var i=0;
+        function onStart()
+        {
+            document.getElementById("carouselItem").src=ar[0];
+            i=0;
+        }
+        function onNext()
+        {
+            if(i>=2)
+            {
+                i==0;
+                document.getElementById("carouselItem").src=ar[i];
+            }
+            else{
+                document.getElementById("carouselItem").src=ar[++i];
+                
+            }
+        }
+        function onPrevious()
+        {
+            if(i<=0)
+            {
+                i==2;
+                document.getElementById("carouselItem").src=ar[i];
+            }
+            else{
+                document.getElementById("carouselItem").src=ar[--i];
+            }
+        }
+    </script>
+
+</body>
+</html>
+
