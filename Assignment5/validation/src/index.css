@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.row{
+  margin: 15px;
+  padding: 10px;
+}
+
+.navbar-brand{
+  margin: 10px;
+}
+#login{
+  width: 40%;
+}
+p{
+  background-color: aquamarine;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5%;
+  border: 2px solid aquamarine;
+  color: brown;
+}
