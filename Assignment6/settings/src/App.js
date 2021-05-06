@@ -9,3 +9,5 @@ function App() {
 }
 
 export default App;
+//csrf attack
+//use cookies
