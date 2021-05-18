@@ -38,12 +38,36 @@ input{
   0 32px 64px rgba(0,0,0,0.07);
   position: fixed;
   margin-top: 200px;
-  left: 10%;
-  width: 80%;
+  left: 30%;
+  width: 40%;
   z-index: 100;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 15px;
+  border: 5px solid rgb(48, 51, 185);
   display: block;
-  background-color: black;
+  background-color: rgb(106, 67, 151);
   color: white;
+  height: 45%;
+}
+
+.elevated{
+  box-shadow: 0 1px 2px rgba(171, 111, 206, 0.719), 
+  0 2px 4px rgba(0,0,0,0.07), 
+  0 4px 8px rgba(0,0,0,0.07), 
+  0 8px 16px rgba(0,0,0,0.07),
+  0 16px 32px rgba(0,0,0,0.07), 
+  0 32px 64px rgba(0,0,0,0.07);
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+.elevated-extra{
+  box-shadow: 0 1px 2px rgba(189, 122, 228, 0.801), 
+  2 2px 4px rgba(189, 122, 228, 0.801), 
+  0 4px 8px rgba(189, 122, 228, 0.801), 
+  0 8px 16px rgba(189, 122, 228, 0.801),
+  0 16px 32px rgba(189, 122, 228, 0.801), 
+  0 32px 64px rgba(189, 122, 228, 0.801);
+  border: 2px solid;
+  border-radius: 2px;
 }

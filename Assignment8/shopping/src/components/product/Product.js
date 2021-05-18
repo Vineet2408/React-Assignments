@@ -17,11 +17,11 @@ const Product = (props) => {
         <Fragment>
            
             <div className="card card-mb-2 mt-2 bg-dark">
-                <img className="" alt='product-pic' src={prod.imageUrl} height="200"/>
+                <img className="elevated" alt='product-pic' src={prod.imageUrl} height="200"/>
                 <div className="card-body">
                     <div className="row">
                         <div className="col-7"> <h5 className="card-title">{prod.title}</h5></div>
-                        <div className="col-5"><p>Rs. {prod.price}</p></div>
+                        <div className="col-5"><p className="elevated text-center text-decoration-underline">Rs. {prod.price}</p></div>
                     </div>
                     <p><i>{prod.description}</i></p>
                     {

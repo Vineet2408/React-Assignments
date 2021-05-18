@@ -1,14 +1,24 @@
 import {Fragment, useEffect,useState} from 'react';
 import axios from 'axios';
 import ProductList from '../components/product/ProductList';
-
+import InfoModal from '../components/layout/InfoModal';
 const Products =(props)=>{
 
     let [list,setList] = useState([]);
 
     let [page,setPage] = useState(1);
 
+    let [info,setInfo] = useState();
+
     let totalProducts=1;
+
+    const infoHandler=(user)=>{
+        setInfo(user);
+    }
+
+    useEffect(()=>{
+        console.log(info);
+    },[info]);
 
     useEffect(()=>{
         fetchProductHandler(page);
@@ -50,6 +60,11 @@ const Products =(props)=>{
         }
     };
 
+    const dismissProductInfo=()=>
+    {
+        setInfo(null);
+    }
+
 const pageHandler = (event)=>{
     console.log(event.target.name);
     if(event.target.name ==='prev')
@@ -68,7 +83,14 @@ const pageHandler = (event)=>{
   
     return (
         <Fragment>
-        <ProductList list={list}/>
+        {(info) && (
+            <InfoModal prod={info} 
+                title="Product Info" 
+                onDismiss={dismissProductInfo}>
+            </InfoModal>
+            )}
+
+        <ProductList list={list} infoHandler={infoHandler}/>
         <div className="row">
             <div className="col-2">
                 <button id='prev' name='prev' style={button.prev} onClick={pageHandler}></button>

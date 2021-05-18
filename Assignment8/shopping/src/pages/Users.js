@@ -7,21 +7,19 @@ import InfoModal from '../components/layout/InfoModal';
 const Users =(props)=>{
 
     const [info,setInfo] = useState();
-    useEffect(()=>{
-        console.log(info);
-    },[info]);
-
-
-    const infoHandler=(user)=>{
-        setInfo(user);
-    }
-    
-
     let [list,setList] = useState([]);
     let [page,setPage] = useState(1);
     let [totalUsers,setTotalUsers] = useState(0);
     let [lastUser,setLastUser] = useState(1);
 
+    const infoHandler=(user)=>{
+        setInfo(user);
+    }
+
+    useEffect(()=>{
+        console.log(info);
+    },[info]);
+   
     useEffect(()=>{
         console.log('inside effect');
         fetchUserHandler(page);
@@ -106,7 +104,7 @@ const Users =(props)=>{
         <Fragment>
             {console.log('info = ',info)}
             {(info) && (<InfoModal user={info} 
-            title="Info" onDismiss={dismissUserInfo}></InfoModal>)}
+            title="User Info" onDismiss={dismissUserInfo}></InfoModal>)}
             
             <div className="container-fluid bg-success">
                 <div className='row justify-content-end'>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const InfoModal = (props) => {
 
@@ -8,31 +8,56 @@ const InfoModal = (props) => {
     return (
         <div className="modal">
             <header>
-                <h3>{props.title}</h3>
+                <h3 className="text-center text-decoration-underline">{props.title}</h3>
+                <hr></hr>
             </header>
-            <div className="row">
+            <div className="container text-white">
                 {
                     (props.user) && (
-                        <div className="card">
-                            <p className="card-title"><strong>{user.name} {user.lastName}</strong></p>
-                            <p>{user.email}</p>
-                            <p>{user.age} {user.contact}</p>
-                        </div>
+                        <Fragment>
+                            <div className="row">
+                                <div className="col-6 ml-2">
+                                   <p> <strong className="text-capitalize"> Name : {user.name} {user.lastName}</strong></p>
+                                </div>
+                                <div className="col-6"></div>
+                            </div>
+                            <div className="row">
+                                <p><i> <strong>Email</strong> : {user.email}</i></p>
+                            </div>
+                            <div className="row">
+                                <p><strong>Age</strong> : {user.age}</p>
+                            </div>
+                            <div className="row">
+                                <p><strong>Contact</strong> : {user.contact}</p>
+                            </div>
+                        </Fragment>
                     )
                 }
                 {
                     (props.prod) && (
-                        <div className="card">
-                            <p className="card-title"><strong>{prod.title}</strong> </p>
-                            <p>{user.description}</p>
-                            <p>{user.price} </p>
-                        </div>
+                        <Fragment>
+                            <div className="row">
+                                <div className="col-6 ml-2">
+                                   <p> <strong className="text-capitalize"> Name : {prod.title}</strong></p>
+                                </div>
+                                <div className="col-6"></div>
+                            </div>
+                            <div className="row">
+                                <p><i> <strong>Description</strong> : {prod.description}</i></p>
+                            </div>
+                            <div className="row bg-success">
+                                <p><strong>Price</strong> : {prod.price}</p>
+                            </div>
+                          
+                        </Fragment>
                     )
                 }
-            </div>
-            <div className="row justify-content-center">
-                <div className="col-4"></div>
-                <button className="btn btn-success" onClick={props.onDismiss}>Dismiss</button>
+            
+                <div className="row justify-content-around">
+                    <div className="col-2">
+                        <button className="btn btn-success" onClick={props.onDismiss}>Dismiss</button>
+                    </div>
+                </div>
             </div>
         </div>
     )
