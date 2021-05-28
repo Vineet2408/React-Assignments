@@ -11,7 +11,7 @@ const UserDetail =(props)=>{
 
     useEffect(() => {
         userHandler();
-    }, [user])
+    }, [])
     
     const userId = params.userId;
     async function userHandler(){
@@ -30,6 +30,7 @@ const UserDetail =(props)=>{
     }
    
     let empty={};
+    console.log(user);
     return (
         <Fragment>
             <User user={(user)?user:empty}/>
